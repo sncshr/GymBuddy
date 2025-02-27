@@ -2,3 +2,4 @@ tensorflow
 mediapipe
 numpy
 matplotlib
+pillow

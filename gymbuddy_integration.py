@@ -1,7 +1,7 @@
 import cv2
 import mediapipe as mp
 import matplotlib.pyplot as plt
-from GymBuddyClassifier import GymBuddyClassifier
+from GymBuddyClassifier import GymbuddyClassifier
 import numpy as np
 from collections import deque
 import math
@@ -104,7 +104,7 @@ def set_video_feed_variables():
     form = 0
     feedback = "Bad Form."
     frame_queue = deque(maxlen=250)
-    clf = GymBuddyClassifier('gymbuddy_classifier_v3.tflite')
+    clf = GymbuddyClassifier('gymbuddy_classifier_v3.tflite')
     return cap,count,direction,form,feedback,frame_queue,clf
 
 
@@ -250,8 +250,10 @@ def main():
         height = cap.get(4)  
         
         #Convert from BGR (used by cv2) to RGB (used by Mediapipe)
-        results = pose.process(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
-        
+        if ret:
+            results = pose.process(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+        else:
+            continue
         #Get pose and draw landmarks
         img = get_pose(img, results, False)
         
