@@ -47,6 +47,7 @@ To train the model, use the [GymBuddy_training.ipynb](http://_vscodecontentref_/
 ## Directory Structure
 - [data](http://_vscodecontentref_/4): Contains training and validation datasets.
 - [models](http://_vscodecontentref_/5): Contains pre-trained models.
+- [GymBuddyMobile](http://_vscodecontentref_/5): Contains React Native Application which utlizes the TFLite model.
 - [utils](http://_vscodecontentref_/6): Utility scripts for data processing and plotting.
 - [GymBuddyClassifier.py](http://_vscodecontentref_/7): Implementation of the GymBuddyClassifier class.
 - [gymbuddy_integration.py](http://_vscodecontentref_/8): Script for integrating the classifier with video feed and providing real-time feedback.
